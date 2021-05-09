@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>LoginForm</title>
+</head>
+<body>
+
+<h2>ログインフォーム</h2>
+
+<form th:action="@{/menu}" th:method="post"
+		th:object="${loginForm}">
+	<span>お名前 : </span>
+	<input type="text" th:field="*{name}"/><br/>
+	<span>メッセージ : </span>
+	<input type="text" th:field="*{msg}"/><br/>
+	<button type="submit" >送信</button>
+</form>
+
+</body>
+</html>
